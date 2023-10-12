@@ -1,3 +1,5 @@
 __pycache__
 ./wbgym/wbgym/__pycache__
 *.env
+
+.vscode
