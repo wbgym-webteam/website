@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "startpage",
+    "Schule",
+    "Schulleben",
+    "Fachbereiche",
+    "Ansprechpartner",
+    "Intern",
 ]
 
 MIDDLEWARE = [
