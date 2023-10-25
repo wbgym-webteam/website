@@ -4,4 +4,7 @@
 
 {% block content %}
     <h1>Home</h1>
+    {% for article in articles %}
+        <p>{{ article.text }}</p>
+    {% endfor %}
 {% endblock %}
