@@ -18,5 +18,3 @@ class Teacher(models.Model):
 
 class Article(models.Model):
     text = models.TextField()
-
-

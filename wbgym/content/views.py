@@ -5,5 +5,5 @@ from .models import Article
 def home(request):
     # get all articles
     articles = Article.objects.all()
-    
-    return render(request, 'main/home.html', {'articles': articles})
+
+    return render(request, 'content/home.html', {'articles': articles})
