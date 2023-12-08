@@ -1,7 +1,7 @@
 # WBGym-Website
 The new website of the WBGym in Kleinmachnow
 
-For the german version of this file, see [here](README_GER.md).
+For the German version of this file, see [here](README_GER.md).
 
 ## Information for Contributors
 
