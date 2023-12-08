@@ -1,0 +1,78 @@
+{% extends 'content/base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block style%}
+.bereiche {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: blueviolet;
+    text-align:center;
+}
+.neuigkeiten {
+    margin-left: 10%;
+    width: 90%;
+    text-align: left;
+}
+th {
+    padding: 15px;
+}
+
+.ueberschrift {
+    text-align: left;
+    color: #000;
+    padding-left: auto;
+    padding-right: auto;
+}
+a:link {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: underline;
+}
+.lila {
+    color: blueviolet;
+    /* Hier muss noch die Richtige farbe eingefügt werden */
+}
+{% endblock %}
+
+{% block content %}
+    <table style="margin-left: auto; margin-right: auto;">
+
+        <tr>
+            <th><h1 class="ueberschrift"> <strong>Weinberg-Gymnasium</strong></h1>
+            <h2 class="ueberschrift" > Kleinmachnow </h2>
+
+            </th>
+        </tr>
+        <!--<tr>
+        img src=""  Weinbergsymbol
+        </tr> -->
+    </table>
+    <table class="bereiche">
+        <tr>
+            <th> <a>Die Schule <a> </th>
+            <th> <a>Schulleben<a> </th>
+            <th> <a>Fachbereiche<a> </th>
+            <th> <a>Ansprechpartner<a> </th>
+            <th> <a>Intern<a> </th>
+            <th> <a>Account<a> </th>
+        </tr>
+    </table>
+    <!--hier muss noch ein Bild der Schule rein-->
+    <!--img src=""-->
+    <table class="neuigkeiten">
+        <tr>
+            <th> <h1 class="lila" >Neuigkeiten</h1> </th>
+            <!--<th> img src="" </th>   Eu Flagge -->
+            <th> EU-Foerderung durch EFRE <br> <a href="">Weitere Informationen </a> </th>
+            <!--<th> img src="" </th>   Leistung macht Schule Bild -->
+            <!--<th> img src="" </th>   medien fit sek 1 Bild -->
+        </tr>
+    </table>
+    <!--article-->
+
+    {% for article in articles %}
+    <p>{{ article.text }}</p>
+    {% endfor %}
+{% endblock %}
