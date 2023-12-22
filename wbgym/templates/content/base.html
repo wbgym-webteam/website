@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} Title {% endblock %}</title>
-    <style>{% block style %} {% endblock %}</style>
+    {% block style %}
+    <link rel="stylesheet" href="../../static/style.css">
+    {% endblock %}
 </head>
 <body>
     {% block content %}
