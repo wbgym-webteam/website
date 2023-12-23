@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "content.apps.ContentConfig",
+    "tailwind",
+    "theme",
 ]
+
+TAILWIND_APP_NAME = "theme"
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -57,7 +62,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             BASE_DIR / "templates",
-            ],
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
