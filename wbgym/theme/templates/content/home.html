@@ -4,10 +4,7 @@
 
 {% block content %}
 
-    <header class="text-purple-600">
-        <h1>Weinberg-Gymnasium</h1>
-    </header>
-    <nav>
+    <nav class="border-black">
         <ul>
             <li>Die Schule</li>
             <li>Schulleben</li>
@@ -17,17 +14,23 @@
             <li>Account</li>
         </ul>
     </nav>
+
+    <header class="text-purple-600  text-center">
+        <h1>Weinberg-Gymnasium</h1>
+    </header>
+
     <!-- TODO: hier muss noch ein Bild der Schule rein-->
 
     <div class="Login">
         <form action="" method="post">
+            {% csrf_token %}
             <label for="email" class="label">E-Mail</label>
             <input type="email" name="email" id="email" class="input" required>
 
             <label for="password" class="label">Passwort</label>
             <input type="password" name="password" id="password" class="input" required>
 
-            <input type="checkbox" name="checkbox_login_as_admin" id="checkbox" class="input">
+            <input type="checkbox" name="login_as_admin" id="checkbox" class="input">
             <label for="checkbox" class="label">Als Admin einloggen</label>
 
             <input type="submit" value="Login" class="button">          
