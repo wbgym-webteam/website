@@ -3,19 +3,16 @@ from django.db import models
 # Create your models here.
 
 
-class Student(models.Model):
+class User(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField()
-    year = models.PositiveSmallIntegerField()
+    role = models.CharField(max_length=30)
+    is_admin = models.BooleanField(default=False)
 
-
-class Teacher(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    email = models.EmailField()
-    # short hand like "herm" for "hermann" (last name)
-    short = models.CharField(max_length=10)
+    if role == "teacher":
+        # short hand like "herm" for "hermann" (last name)
+        short = models.CharField(max_length=10)
 
 
 class Article(models.Model):
